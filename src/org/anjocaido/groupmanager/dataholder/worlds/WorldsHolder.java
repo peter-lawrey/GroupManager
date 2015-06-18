@@ -4,25 +4,21 @@
  */
 package org.anjocaido.groupmanager.dataholder.worlds;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Properties;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import org.anjocaido.groupmanager.GroupManager;
-import org.anjocaido.groupmanager.dataholder.WorldDataHolder;
 import org.anjocaido.groupmanager.dataholder.OverloadedWorldHolder;
+import org.anjocaido.groupmanager.dataholder.WorldDataHolder;
 import org.anjocaido.groupmanager.permissions.AnjoPermissionsHandler;
 import org.anjocaido.groupmanager.utils.Tasks;
 import org.bukkit.World;
 import org.bukkit.entity.Player;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * 
@@ -694,7 +690,7 @@ public class WorldsHolder {
 	 * Returns all physically loaded worlds which have at least
 	 * one of their own data sets for users or groups which isn't an identical mirror.
 	 * 
-	 * @return ArrayList<OverloadedWorldHolder> of all loaded worlds
+	 * @return ArrayList of OverloadedWorldHolder of all loaded worlds
 	 */
 	public ArrayList<OverloadedWorldHolder> allWorldsDataList() {
 

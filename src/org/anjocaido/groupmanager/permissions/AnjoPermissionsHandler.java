@@ -4,19 +4,14 @@
  */
 package org.anjocaido.groupmanager.permissions;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-
 import org.anjocaido.groupmanager.GroupManager;
 import org.anjocaido.groupmanager.data.Group;
-import org.anjocaido.groupmanager.dataholder.WorldDataHolder;
 import org.anjocaido.groupmanager.data.User;
+import org.anjocaido.groupmanager.dataholder.WorldDataHolder;
 import org.anjocaido.groupmanager.utils.PermissionCheckResult;
 import org.bukkit.entity.Player;
+
+import java.util.*;
 
 /**
  * Everything here maintains the model created by Nijikokun
@@ -96,8 +91,7 @@ public class AnjoPermissionsHandler extends PermissionsReaderInterface {
 	 * Returns All permissions (including inheritance and sub groups) for the
 	 * player, including child nodes from Bukkit.
 	 * 
-	 * @param userName
-	 * @return List<String> of all players permissions.
+	 * @return List of String of all players permissions.
 	 */
 	@Override
 	public List<String> getAllPlayersPermissions(String userName) {
@@ -113,8 +107,7 @@ public class AnjoPermissionsHandler extends PermissionsReaderInterface {
 	 * Returns All permissions (including inheritance and sub groups) for the
 	 * player. With or without Bukkit child nodes.
 	 * 
-	 * @param userName
-	 * @return Set<String> of all players permissions.
+	 * @return Set of String of all players permissions.
 	 */
 	@Override
 	public Set<String> getAllPlayersPermissions(String userName, Boolean includeChildren) {
@@ -227,7 +220,7 @@ public class AnjoPermissionsHandler extends PermissionsReaderInterface {
 	/**
 	 * Verify if player is in such group. It will check it's groups inheritance.
 	 * 
-	 * So if you have a group Admin > Moderator
+	 * So if you have a group Admin &gt; Moderator
 	 * 
 	 * And verify the player 'MyAdmin', which is Admin, it will return true for
 	 * both Admin or Moderator groups.

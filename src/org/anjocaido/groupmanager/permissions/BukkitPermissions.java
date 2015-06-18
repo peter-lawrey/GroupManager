@@ -17,21 +17,8 @@
 
 package org.anjocaido.groupmanager.permissions;
 
-import java.lang.reflect.Field;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.LinkedHashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.ListIterator;
-import java.util.Map;
-import java.util.Set;
-import java.util.WeakHashMap;
-
 import org.anjocaido.groupmanager.GroupManager;
 import org.anjocaido.groupmanager.data.User;
-
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -46,6 +33,9 @@ import org.bukkit.permissions.Permission;
 import org.bukkit.permissions.PermissionAttachment;
 import org.bukkit.permissions.PermissionAttachmentInfo;
 import org.bukkit.plugin.PluginManager;
+
+import java.lang.reflect.Field;
+import java.util.*;
 
 /**
  * 
@@ -337,7 +327,7 @@ public class BukkitPermissions {
 	 * List all effective permissions for this player.
 	 * 
 	 * @param player
-	 * @return List<String> of permissions
+	 * @return List of String of permissions
 	 */
 	public List<String> listPerms(Player player) {
 
